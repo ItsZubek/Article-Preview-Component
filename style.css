@@ -1,3 +1,10 @@
+:root {
+  --darkgrayishblue: hsl(217, 19%, 35%);
+  --darkblue: hsl(214, 17%, 51%);
+  --grayishblue: hsl(212, 23%, 69%);
+  --lightgrayishblue: hsl(210, 46%, 95%);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -24,4 +31,110 @@ body {
     justify-content: center;
     align-items: center;
     height: 100svh;
+    font-size: 13px;
+    font-family: 'Manrope';
+    background-color: var(--lightgrayishblue);
+}
+.article {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+}
+.left-side {
+  display: flex;
+  flex-basis: 40%;
+  background: url('./images/drawers.jpg');
+  background-size: cover;
+  background-position: left center;
+  border-radius: 10px 0px 0px 10px;
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 30px;
+  background-color: white;
+  gap: 20px;
+  border-radius: 0px 10px 10px 0px;
+}
+.thumbnail {
+  display: block;
+  object-fit: cover;
+}
+h1, p {
+  margin: 0;
+}
+h1 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: var(--darkgrayishblue);
+}
+p {
+  font-weight: 500;
+  color: var(--darkblue);
+}
+.author-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.author-details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.author-details img {
+  display: block;
+  max-width: 40px;
+  border-radius: 30px;
+}
+.author-metadata {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.author-name {
+  color: var(--darkgrayishblue);
+  font-weight: 700;
+}
+.post-date {
+  font-weight: 500;
+  color: var(--grayishblue);
+}
+.share-btn {
+  padding: 8px;
+  background-color: var(--lightgrayishblue);
+  border-radius: 100%;
+  cursor: pointer;
+}
+.share-tooltip {
+  position: absolute;
+  border-radius: 10px;
+  padding: 20px 30px;
+  background-color: var(--darkgrayishblue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  bottom: 60px;
+  right: -92px;
+  z-index: 5;
+}
+.share-tooltip span {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--lightgrayishblue);
+}
+.share-tooltip::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--darkgrayishblue);
+  position: absolute;
+  bottom: -10px;
+  transform: rotate(45deg);
 }
